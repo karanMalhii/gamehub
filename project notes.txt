@@ -1,2 +1,4 @@
-git
+Git
 yarn add react-router-dom 
+install tailwind package & setup
+create or setup a router.
