@@ -1,0 +1,38 @@
+import { Button, Navbar } from "flowbite-react";
+import { Label, TextInput } from "flowbite-react";
+import { CiSearch } from "react-icons/ci";
+import { ToggleSwitch } from "flowbite-react";
+import { useState } from "react";
+
+function Navigation() {
+  const [switch1, setSwitch1] = useState(false);
+  return (
+    <Navbar fluid rounded>
+      <Navbar.Brand href="https://flowbite-react.com">
+        <img
+          src="https://raw.githubusercontent.com/NoroffFEU/first-year-cross-course-assignment-brief-three/master/GameHub_Logo.png"
+          className="mr-3 w-24"
+          alt="Flowbite React Logo"
+        />
+      </Navbar.Brand>
+      <div className="flex md:order-2">
+        <ToggleSwitch
+          checked={switch1}
+          label="Toggle me"
+          onChange={setSwitch1}
+        />
+        <Navbar.Toggle />
+      </div>
+      <Navbar.Collapse>
+        <TextInput
+          className="w-full"
+          type="text"
+          icon={CiSearch}
+          placeholder="Search here..."
+          required
+        />
+      </Navbar.Collapse>
+    </Navbar>
+  );
+}
+export default Navigation;
