@@ -6,7 +6,6 @@ export default function App() {
   return (
     <div>
       <Navigation/>
-      <Button>Click me</Button>
     </div>
   );
 }

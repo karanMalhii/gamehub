@@ -1,7 +1,5 @@
-import { Button, Navbar } from "flowbite-react";
-import { Label, TextInput } from "flowbite-react";
+import { Navbar, TextInput, ToggleSwitch } from "flowbite-react";
 import { CiSearch } from "react-icons/ci";
-import { ToggleSwitch } from "flowbite-react";
 import { useState } from "react";
 
 function Navigation() {
@@ -18,7 +16,7 @@ function Navigation() {
       <div className="flex md:order-2">
         <ToggleSwitch
           checked={switch1}
-          label="Toggle me"
+          label={switch1 ? "dark" : "light"}
           onChange={setSwitch1}
         />
         <Navbar.Toggle />
