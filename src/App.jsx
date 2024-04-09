@@ -3,9 +3,12 @@ import Navigation from "./Components/Navigation";
 import { Spinner } from "flowbite-react";
 import GameCard from "./Components/cards/GameCard";
 import { useGames } from "./api/hooks/useGames";
+import { useGame } from "./api/hooks/useGame";
 
 export default function App() {
   const {data, isLoading} = useGames();
+  const {data: game} = useGame();
+
   return (
     <div>
       <Navigation />

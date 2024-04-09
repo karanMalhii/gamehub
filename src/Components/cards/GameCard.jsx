@@ -1,29 +1,30 @@
 import React from "react";
+import { Link } from "react-router-dom";
 
 export default function GameCard({ digitalCard }) {
-  console.log(digitalCard);
+  
   return (
-    <div class="">
-    <div class="bg-gray-700 w-fit rounded-xl">
-        <div class="w-fit">
+    <div className="">
+    <div className="bg-gray-700 w-fit rounded-xl">
+        <div className="w-fit">
             <img src={digitalCard.background_image} alt=""
-                class="rounded-t-xl w-72 h-48" />
+                className="rounded-t-xl w-72 h-48" />
         </div>
-        <div class="p-4">
-            <div class="flex justify-between">
-                <div class="flex gap-">
+        <div className="p-4">
+            <div className="flex justify-between">
+                <div className="flex gap-">
                     <div>🎃</div>
                     <div>😍</div>
                     <div>😎</div>
                     <div>🎎</div>
                 </div>
-                <div class="">
+                <div className="">
                     <div>🎡</div>
                 </div>
             </div>
-            <div class="py-2">
-                <div class="text-white font-bold text-xl break-normal w-48">{digitalCard.name}</div>
-             
+            <div className="py-2">
+                <Link to={`/game/${digitalCard.slug}`} className="text-white font-bold text-xl break-normal w-48">{digitalCard.name}</Link>
+                          
             </div>
             <div>🎯</div>
         </div>
